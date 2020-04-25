@@ -17,6 +17,8 @@ export default function App() {
     email: '',
     role: '',
 });
+
+
 const onInputChange = event => {
     const inputThatChanged = event.target.name
     const newValueForInput = event.target.value
@@ -51,8 +53,10 @@ const onFormSubmit = event => {
       <h3>List of Team Members:</h3>
         {
           teamMembers.map(member => 
+            
             <div 
               key={member.id}
+              className='team-members'
             >
               <br/>
               First Name: {member.firstName}

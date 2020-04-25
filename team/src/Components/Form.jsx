@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-
+import './Form.scss'
 const Form = (props) => {
 
     return (
-        <div>
+        <div className='Form-Container'>
             <form onSubmit={props.onFormSubmit}>
-                <label>
+                <label className='title'>
                     First Name:
                     <input
                         onChange={props.onInputChange}
@@ -15,7 +15,7 @@ const Form = (props) => {
                     />
                 </label>
                 <br/>
-                <label>
+                <label className='title'>
                     Last Name:
                     <input
                         onChange={props.onInputChange}
@@ -23,9 +23,9 @@ const Form = (props) => {
                         name='lastName'
                         type='text'
                     />
-                </label>
+                </label >
                 <br/>
-                <label>
+                <label className='title'>
                     Email:
                     <input
                         onChange={props.onInputChange}
@@ -35,7 +35,7 @@ const Form = (props) => {
                     />
                 </label>
                 <br/>
-                <label>
+                <label className='title'>
                     Role:
                     <input
                         onChange={props.onInputChange}
@@ -44,10 +44,11 @@ const Form = (props) => {
                         type='text'
                     />
                     <br/>
-                    <input 
+                    <button
+                        className='submit-button'
                         type='submit'
                         // onSubmit={props.submit}
-                        />
+                        >Submit</button>
                     <br/>
                 </label>
 
